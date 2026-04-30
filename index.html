@@ -1,127 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Kharcha Book</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #1F2933;
-      background: #ffffff;
-      padding: 40px 20px 80px;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-    h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #1F2933; }
-    .subtitle { font-size: 14px; color: #52606D; margin-bottom: 40px; }
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1F2933;
-      margin-top: 36px;
-      margin-bottom: 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #E3E7EE;
-    }
-    p { margin-bottom: 12px; color: #3D4754; }
-    ul { margin: 8px 0 12px 20px; color: #3D4754; }
-    ul li { margin-bottom: 6px; }
-    .highlight {
-      background: #F3F5F9;
-      border-left: 3px solid #4F46E5;
-      padding: 14px 18px;
-      border-radius: 0 8px 8px 0;
-      margin: 16px 0;
-      font-size: 15px;
-      color: #3D4754;
-    }
-    a { color: #4F46E5; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #E3E7EE;
-      font-size: 13px;
-      color: #52606D;
-    }
-  </style>
-</head>
-<body>
+<b>Privacy Policy — Kharcha Manager</b><br><br>
 
-  <h1>Privacy Policy</h1>
-  <p class="subtitle">WhereIsMyMoney &nbsp;·&nbsp; Last updated: April 2026</p>
+<b>Last updated: April 30, 2026</b><br><br>
 
-  <div class="highlight">
-    WhereIsMyMoney is a personal expense tracking app. We are committed to protecting your privacy. This policy explains what data we collect, why we collect it, and how it is used.
-  </div>
+Kharcha Manager ("the app", "we", "our") is a personal finance and expense tracking app built for individuals and households. This policy explains exactly what data the app collects, where it is stored, and how you can control it.<br><br>
 
-  <h2>1. Who we are</h2>
-  <p>WhereIsMyMoney ("the app", "we", "us") is developed and maintained by Vivek Goyal. For any privacy-related questions, you can reach us at <a href="mailto:vivekgoyal.vg29@gmail.com">vivekgoyal.vg29@gmail.com</a>.</p>
+<b>1. Summary</b><br>
+<ul>
+<li><b>Transactions, accounts, categories, budgets</b> — Stored on your device only (SQLite). Only you can access it.</li>
+<li><b>Shared profile data (if enabled)</b> — Stored in Firebase / Firestore. Accessible only to you and invited members.</li>
+<li><b>Sign-in email / identity</b> — Stored in Firebase Authentication.</li>
+<li><b>App update configuration</b> — Firebase Remote Config (no personal data).</li>
+<li><b>Subscription status</b> — Managed by Google Play.</li>
+<li><b>SMS transactions (if permitted)</b> — Stored locally on your device only.</li>
+</ul><br>
 
-  <h2>2. Data we collect</h2>
-  <p>We collect only the minimum data necessary to provide the app's features:</p>
-  <ul>
-    <li><strong>Phone number</strong> — collected during sign-in via Firebase Phone Authentication (OTP). Used solely to verify your identity.</li>
-    <li><strong>Transaction data</strong> — amounts, categories, accounts, comments, and dates that you enter manually. Stored locally on your device.</li>
-    <li><strong>Budget data</strong> — budget amounts and categories you configure. Stored locally on your device.</li>
-    <li><strong>SMS messages</strong> — only if you explicitly grant SMS permission, the app reads bank debit SMS messages to extract expense amounts. This data is processed entirely on your device and is never transmitted to any server.</li>
-    <li><strong>Camera</strong> — only if you use the QR code scanner feature to scan UPI payment QR codes. No images are stored or transmitted.</li>
-    <li><strong>App usage data</strong> — we do not collect analytics, crash reports, or behavioural tracking data.</li>
-  </ul>
+<b>2. Data Stored Locally on Your Device</b><br>
+All core financial data — transactions, accounts, categories, and budgets — is stored in a local SQLite database on your device.<br>
+<ul>
+<li>Never sent to any server unless you enable shared profiles</li>
+<li>Remains on your device unless you uninstall or clear app data</li>
+<li>Not accessible to us or any third party</li>
+</ul>
+SMS data is processed locally and never transmitted.<br><br>
 
-  <h2>3. How we use your data</h2>
-  <ul>
-    <li>Your phone number is used only to authenticate you via Firebase and is not used for marketing or shared with third parties.</li>
-    <li>Transaction, budget, category, and account data is stored locally in a SQLite database on your device. It is not uploaded to any cloud service.</li>
-    <li>SMS data is read and parsed on-device only. It is never transmitted externally.</li>
-    <li>QR code data (UPI strings) is used only to open your chosen payment app and record the transaction. It is not stored beyond the session.</li>
-  </ul>
+<b>3. Shared Profiles and Cloud Data</b><br>
+Shared profiles are optional and opt-in.<br>
+<ul>
+<li>Stored in Google Firebase Firestore</li>
+<li>Accessible only to invited members</li>
+<li>Requires sign-in via Firebase Authentication</li>
+<li>Email is stored only for authentication and access control</li>
+</ul>
+If you do not use shared profiles, all data remains on your device.<br><br>
 
-  <h2>4. Data storage and security</h2>
-  <p>All financial data (transactions, budgets, accounts, categories) is stored locally on your device using SQLite. It does not leave your device unless you explicitly export it as an Excel file using the in-app export feature.</p>
-  <p>Firebase Authentication is used for phone number verification. Firebase may retain authentication tokens as per <a href="https://firebase.google.com/support/privacy" target="_blank">Google's Firebase Privacy Policy</a>.</p>
+<b>Roles in Shared Profiles</b><br>
+<ul>
+<li><b>Owner:</b> Can invite members, rename, delete, and control sharing</li>
+<li><b>Member:</b> Can view and add data but cannot delete the profile</li>
+</ul><br>
 
-  <h2>5. Permissions we request</h2>
-  <ul>
-    <li><strong>CAMERA</strong> — required for QR code scanning. Used only when you tap the QR scan button.</li>
-    <li><strong>READ_SMS</strong> — required to load expense data from bank SMS messages. Only accessed when you explicitly tap "Load expense from messages". Never accessed in the background.</li>
-    <li><strong>INTERNET</strong> — required for Firebase phone number authentication (OTP).</li>
-  </ul>
-  <p>You can revoke any of these permissions at any time from your device's Settings.</p>
+<b>4. Permissions</b><br>
+<b>SMS (Read Messages)</b><br>
+Used only to import transaction messages.<br>
+<ul>
+<li>Processed locally</li>
+<li>Never sent to servers</li>
+<li>Accessed only when you initiate import</li>
+</ul>
+You can deny this permission and still use the app.<br><br>
 
-  <h2>6. Third-party services</h2>
-  <p>The app uses the following third-party services:</p>
-  <ul>
-    <li><strong>Firebase Authentication (Google)</strong> — for phone number sign-in. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
-  </ul>
-  <p>We do not use any advertising SDKs, analytics platforms, or third-party tracking tools.</p>
+<b>Internet</b><br>
+Required for sign-in, syncing, updates, and subscriptions.<br><br>
 
-  <h2>7. Data sharing</h2>
-  <p>We do not sell, trade, or share your personal data with any third parties, except as required by law or as described in Section 6 (Firebase Authentication).</p>
+<b>5. Authentication</b><br>
+We use Firebase Authentication.<br>
+<ul>
+<li>Email address</li>
+<li>Firebase user ID (UID)</li>
+<li>Authentication tokens (managed by Firebase)</li>
+</ul>
+Passwords are never stored or accessed by us.<br><br>
 
-  <h2>8. Data retention and deletion</h2>
-  <p>All data stored locally on your device can be deleted at any time using the "Delete everything" or "Reset app" options available in the app's main menu.</p>
-  <p>To delete your Firebase authentication record, please contact us at <a href="mailto:vivekgoyal.vg29@gmail.com">vivekgoyal.vg29@gmail.com</a> and we will process your request promptly.</p>
+<b>6. Subscriptions (Kharcha Pro)</b><br>
+Handled entirely by Google Play Billing. We only receive subscription status (active/expired). No payment details are shared with us.<br><br>
 
-  <h2>9. Children's privacy</h2>
-  <p>This app is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+<b>7. App Updates</b><br>
+Firebase Remote Config is used to check for updates. No personal data is collected.<br><br>
 
-  <h2>10. Changes to this policy</h2>
-  <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date at the top. We encourage you to review this page periodically.</p>
+<b>8. Data We Do Not Collect</b><br>
+<ul>
+<li>Name, phone number, or address</li>
+<li>Device identifiers or advertising IDs</li>
+<li>Location data</li>
+<li>Analytics or usage tracking</li>
+<li>Crash reports</li>
+</ul><br>
 
-  <h2>11. Contact us</h2>
-  <p>If you have any questions or concerns about this privacy policy or your data, please contact:</p>
-  <ul>
-    <li>Email: <a href="mailto:vivekgoyal.vg29@gmail.com">vivekgoyal.vg29@gmail.com</a></li>
-  </ul>
+<b>9. Third-Party Services</b><br>
+<ul>
+<li>Firebase Authentication — Google LLC</li>
+<li>Firebase Firestore — Google LLC</li>
+<li>Firebase Remote Config — Google LLC</li>
+<li>Google Play Billing — Google LLC</li>
+</ul>
+Google Privacy Policy: https://policies.google.com/privacy<br><br>
 
-  <div class="footer">
-    &copy; 2026 WhereIsMyMoney · Vivek Goyal · <a href="mailto:vivekgoyal.vg29@gmail.com">vivekgoyal.vg29@gmail.com</a>
-  </div>
+<b>10. Data Retention</b><br>
+<ul>
+<li><b>Local data:</b> Until app is uninstalled or data cleared</li>
+<li><b>Shared data:</b> Until profile is deleted</li>
+<li><b>Authentication:</b> Until account is deleted</li>
+</ul><br>
 
-</body>
-</html>
+<b>11. Your Rights — Data and Account Deletion</b><br>
+<b>Local data:</b> Delete by clearing app data or uninstalling.<br><br>
+
+<b>Shared data:</b><br>
+<ul>
+<li>Delete profile from app (instant deletion)</li>
+<li>Or email: vivekgoyal.vg29@gmail.com</li>
+</ul>
+Subject: <b>Data Deletion Request</b><br>
+Include your account email. Requests are processed within 14 business days.<br><br>
+
+<b>12. Children's Privacy</b><br>
+Not intended for children under 13. No data is knowingly collected from children.<br><br>
+
+<b>13. Changes to This Policy</b><br>
+We may update this policy. Changes will be reflected in the updated date and app notifications if significant.<br><br>
+
+<b>14. Contact</b><br>
+Email: vivekgoyal.vg29@gmail.com<br>
+Subject: Privacy Policy Inquiry<br><br>
+
+Kharcha Manager is independently developed and not affiliated with Google LLC.
